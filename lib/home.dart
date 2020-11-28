@@ -118,28 +118,36 @@ class _HomeScreenState extends State<HomeScreen> {
       "btype": "Services and Commissions",
       "picture": "assets/steak.jpg",
       "ppic": "assets/p1.jpg",
-      "location": "San Lorenzo, Sta.Rosa"
+      "location": "San Lorenzo, Sta.Rosa",
+      "comments": "43",
+      "likes": "154"
     },
     {
       "bname": "VP art commissions",
       "btype": "Services an123d Commissions",
       "picture": "assets/pa.jpeg",
       "ppic": "assets/p2.jpg",
-      "location": "San Lorenzo, Sta.Rosa"
+      "location": "San Lorenzo, Sta.Rosa",
+      "comments": "23",
+      "likes": "80"
     },
     {
       "bname": "Lorenzo School Supp.",
       "btype": "Services an123 Commissions",
       "picture": "assets/ss.jpg",
       "ppic": "assets/p3.jpg",
-      "location": "San Lorenzo, Sta.Rosa"
+      "location": "San Lorenzo, Sta.Rosa",
+      "comments": "51",
+      "likes": "92"
     },
     {
       "bname": "Neighbor's cuisine",
       "btype": "Servic123es and Co123mmissions",
       "picture": "assets/bq.jpg",
       "ppic": "assets/p4.jpg",
-      "location": "San Lorenzo, Sta.Rosa"
+      "location": "San Lorenzo, Sta.Rosa",
+      "comments": "89",
+      "likes": "230"
     }
   ];
 
@@ -188,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
         transform: Matrix4.translationValues(xOffset, yOffset, 0)
           ..scale(scaleFactor),
         duration: Duration(milliseconds: 250),
-        color: Colors.white,
+        color: Color(0xFF2e2a00),
         child: ListView.builder(
             itemCount: contentEach.length,
             itemBuilder: (context, index) {
@@ -237,10 +245,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.phone),
-                            SizedBox(width: 250),
-                            Icon(Icons.chat_bubble),
-                            SizedBox(width: 30),
-                            Icon(Icons.thumbs_up_down)
+                            Text("Contact"),
+                            SizedBox(width: 170),
+                            Icon(Icons.textsms_outlined),
+                            Text(contentEach[index]["comments"]),
+                            SizedBox(width: 10),
+                            Icon(Icons.thumb_up_alt),
+                            SizedBox(width: 5),
+                            Text(contentEach[index]["likes"])
                           ])
                     ])),
               );
