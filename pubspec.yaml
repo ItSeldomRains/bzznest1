@@ -60,6 +60,8 @@ flutter:
    - assets/p2.jpg
    - assets/p3.jpg
    - assets/p4.jpg
+   - assets/face.jpg
+   - assets/bean_draw.png
    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

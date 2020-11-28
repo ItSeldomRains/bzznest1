@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:animated_button/animated_button.dart';
 import 'package:project_1/about.dart';
 import 'package:project_1/help.dart';
-import 'package:project_1/messagesBox.dart';
-import 'favorite.dart';
-import 'profile.dart';
+import 'package:project_1/profile.dart';
+import 'messagesBox.dart';
+import 'home.dart';
 
-class HomePage extends StatefulWidget {
+class FavPage extends StatefulWidget {
   @override
-  HomeState createState() => HomeState();
+  FavState createState() => FavState();
 }
 
-class HomeState extends State<HomePage> {
+class FavState extends State<FavPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
@@ -132,33 +132,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   var contentEach = [
     {
-      "bname": "RamRanch Steaks",
-      "btype": "Services and Commissions",
-      "picture": "assets/steak.jpg",
-      "ppic": "assets/p1.jpg",
-      "location": "San Lorenzo, Sta.Rosa",
-      "comments": "43",
-      "likes": "154"
-    },
-    {
-      "bname": "VP art commissions",
-      "btype": "Services an123d Commissions",
-      "picture": "assets/pa.jpeg",
-      "ppic": "assets/p2.jpg",
-      "location": "San Lorenzo, Sta.Rosa",
-      "comments": "23",
-      "likes": "80"
-    },
-    {
-      "bname": "Lorenzo School Supp.",
-      "btype": "Services an123 Commissions",
-      "picture": "assets/ss.jpg",
-      "ppic": "assets/p3.jpg",
-      "location": "San Lorenzo, Sta.Rosa",
-      "comments": "51",
-      "likes": "92"
-    },
-    {
       "bname": "Neighbor's cuisine",
       "btype": "Servic123es and Co123mmissions",
       "picture": "assets/bq.jpg",
@@ -277,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 AnimatedButton(
                                     height: 30,
                                     width: 50,
-                                    color: Colors.black,
+                                    color: Colors.red,
                                     onPressed: () {},
                                     child: Icon(Icons.favorite,
                                         color: Colors.white))
@@ -303,17 +276,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     RaisedButton(
                         color: Color(0xFF242424),
-                        onPressed: () {},
-                        child: Icon(Icons.store, color: Colors.yellow)),
-                    RaisedButton(
-                        color: Color(0xFF242424),
                         onPressed: () {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FavPage()));
+                                  builder: (context) => HomePage()));
                         },
-                        child: Icon(Icons.favorite, color: Colors.white)),
+                        child: Icon(Icons.store, color: Colors.white)),
+                    RaisedButton(
+                        color: Color(0xFF242424),
+                        onPressed: () {
+                          debugPrint("awerq");
+                        },
+                        child: Icon(Icons.favorite, color: Colors.yellow)),
                     RaisedButton(
                         color: Color(0xFF242424),
                         onPressed: () {

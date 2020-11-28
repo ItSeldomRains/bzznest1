@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/signupasBuyer.dart';
-import 'main.dart';
+
+import 'package:animated_button/animated_button.dart';
 import 'package:project_1/signupasVendor.dart';
 
 class EntryPage extends StatefulWidget {
@@ -37,41 +38,41 @@ class EntryState extends State<EntryPage> {
               Text("Are you a...", style: TextStyle(fontSize: 15)),
               SizedBox(height: 20),
               Center(
-                  child: Row(
+                  child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                     // I AM A CUSTOMER
-                    Column(children: [
-                      Container(
-                          width: 100,
-                          height: 100,
-                          child: FlatButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    new MaterialPageRoute(
-                                        builder: (context) => SignupPage()));
-                              },
-                              child: Image.asset("assets/home_button.png"))),
-                      Text("Buyer?")
-                    ]),
+                    Container(
+                        width: 100,
+                        height: 100,
+                        child: AnimatedButton(
+                            width: 100,
+                            height: 60,
+                            color: Colors.black,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (context) => SignupPage()));
+                            },
+                            child: Text("Buyer",
+                                style: TextStyle(color: Colors.white)))),
 
-                    SizedBox(width: 50),
+                    SizedBox(height: 20),
                     // I WANT TO SELL
-                    Column(children: [
-                      Container(
-                          width: 100,
-                          height: 100,
-                          child: FlatButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    new MaterialPageRoute(
-                                        builder: (context) => SignupPage2()));
-                              },
-                              child: Image.asset("assets/home_button.png"))),
-                      Text("Vendor?")
-                    ])
+                    Container(
+                        child: AnimatedButton(
+                            width: 100,
+                            height: 60,
+                            color: Colors.black,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (context) => SignupPage2()));
+                            },
+                            child: Text("Vendor",
+                                style: TextStyle(color: Colors.white))))
                   ]))
             ])),
       ),
