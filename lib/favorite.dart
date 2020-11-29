@@ -67,10 +67,8 @@ class _State extends State<DrawerScreen> {
                 height: 50,
                 color: Colors.transparent,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => AboutRoute()));
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => HelpRoute()));
                 },
                 child: Text("Help",
                     style: TextStyle(fontSize: 15, color: Colors.white)),
@@ -87,8 +85,10 @@ class _State extends State<DrawerScreen> {
                 height: 50,
                 color: Colors.transparent,
                 onPressed: () {
-                  Navigator.push(context,
-                      new MaterialPageRoute(builder: (context) => HelpRoute()));
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => AboutRoute()));
                 },
                 child: Text("About",
                     style: TextStyle(fontSize: 15, color: Colors.white)),
