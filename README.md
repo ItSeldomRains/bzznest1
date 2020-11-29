@@ -1,4 +1,4 @@
-Official Submission for HackFest 2020:
+Official Submission for HackFest 2020: 2-day hackaton proper
 
 Team: Start UP
 
